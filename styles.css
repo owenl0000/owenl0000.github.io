@@ -53,12 +53,11 @@ header {
     border-bottom: 1px solid #3e4451; 
     position: fixed;
     width: 100%;
-    z-index: 10;
+    z-index: 11;  
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0x;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+    padding: 0;
     color: #abb2bf;
     height: 50px;
 }
@@ -70,8 +69,9 @@ header {
     border-bottom: 2px solid #fff;
     border-radius: 5px 5px 0 0;
     margin-right: 20px;
-    box-shadow: 0px -2px 5px rgba(0,0,0,0.2);
     overflow: hidden;
+    z-index: 12;
+    margin-bottom: -2px;
 }
 
 .tab-hover {
@@ -157,14 +157,25 @@ header a#logo p{
     background-color: #3e4451;
     display: flex;
     align-items: center;
-    padding: 5px 20px;
     color: #abb2bf;
     font-size: 16px;
     position: fixed;
-    top: 50px;
+    top: 50px;  
     width: 100%;
-    z-index: 9;
+    z-index: 10;
+    height: 30px;  
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    padding-left: 30px !important;
+}
+
+header, .sub-header {
+    line-height: 1.2; 
+    margin: 0;
+}
+
+.tab, .sub-header {
+    margin: 0;
+    padding: 0;
 }
 
 .sub-header span {
@@ -173,17 +184,14 @@ header a#logo p{
 
 .logo-text {
     color: #abb2bf;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
-.section-icon {
-    display: none;
-    margin-right: 5px;
-    color: #abb2bf;
+.section-icons i.fas.fa-link {
+    color: #FFA500;
 }
 
 .section-name {
-   
 }
 
 /*-----Introduction------*/
@@ -418,7 +426,8 @@ header a#logo p{
 /*-----Experience------*/
 #experience {
     background-color: #1e2127;
-    margin-bottom: 100px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
     align-items: center;
     display: flex;
     flex-direction: column;
