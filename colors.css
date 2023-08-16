@@ -1,0 +1,35 @@
+.comment-color {
+    color: #5c6370;
+}
+
+.string-color {
+    color: #98c379;
+}
+
+.number-color {
+    color: #d19a66;
+}
+
+.keyword-color {
+    color: #c678dd;
+}
+
+.function-color {
+    color: #61afef;
+}
+
+.variable-color {
+    color: #e06c75;
+}
+
+.property-color {
+    color: #56b6c2;
+}
+
+.selector-color {
+    color: #e06c75;
+}
+
+.punctuation-color {
+    color: #abb2bf;
+}

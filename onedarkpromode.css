@@ -1,0 +1,357 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*-----Navbar------*/
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+header ul {
+    margin: 0;
+    padding: 0 ;
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+
+header li {
+    color: #000;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    display: inline-flex;
+    margin: 10px;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+header a#logo {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+}
+
+header a#logo p{
+    font-size: 30px; 
+    line-height: 1;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.icon-link {
+    display: none; /* Hide icons by default */
+}
+
+.text-link {
+    display: inline; /* Show text links by default */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .icon-link {
+        display: inline; /* Show icons on smaller screens */
+    }
+
+    .text-link {
+        display: none; /* Hide text links on smaller screens */
+    }
+}
+
+/*-----Introduction------*/
+#welcome {
+    position: relative;
+    box-sizing: border-box;
+    padding: 40px;
+    text-align: left;
+    top: 50px;
+    width: 75%;
+    margin: 0 auto;
+}
+
+#welcome p {
+    margin: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#welcome .name-title {
+    font-size: 20px;
+}
+
+#welcome .student-title {
+    font-size: 16px;
+    color: #b9b9b9;
+}
+
+#welcome h1 {
+    margin: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    color: #1a1b1f;
+    font-weight: 500;
+}
+
+/*-----Projects------*/
+#projects {
+    margin-top: 100px;
+    text-align: center;
+}
+
+#projects h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.project-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-box p {
+    font-family: 'Montserrat', sans-serif;
+    color: #b9b9b9;
+    font-size: 14px;
+}
+
+.project-box h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 19px;
+
+}
+
+.project-link {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.project-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.github-link {
+    position: absolute;
+    bottom: 20px; 
+    right: 20px; 
+}
+
+.github-link img {
+    width: 20px; 
+    height: auto;
+}
+
+@media (max-width: 1024px) {
+    .project-container {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust as needed */
+    }
+}
+
+@media (max-width: 768px) {
+    .project-box {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/*-----Contact Me------*/
+#contact-container {
+    background-color: #f4f4f4;
+    width: 95%;
+    margin: 20px auto;
+}
+
+#contact {
+    margin: 20px;
+    width: 75%;
+    padding: 20px;
+    
+}
+
+#contact h2 {
+    font-weight: 300;
+    font-size: 36px;
+    margin: 5px 5px 0 0;
+}
+
+#contact .input-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#contact .input-group {
+    width: 48%;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+#contact textarea {
+    height: 300px; 
+    resize: none;
+}
+
+#contact button {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: none;
+    color: #b9b9b9;;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #666;
+}
+
+#contact label {
+    margin-bottom: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color:#000
+}
+
+/*----Skills----*/
+#skills {
+    background-color: #ffffff;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    
+}
+
+#skills h2 {
+    font-size: 36px;
+    color: #000000;
+    margin-bottom: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill-column {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.skill-name {
+    width: 100px;
+    white-space: nowrap;
+    padding-right: 5px;
+    font-size: 18px;
+    color: #777;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.progress {
+    display: flex;
+    align-items: center;
+}
+
+
+.point {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    margin-left: 5px;
+}
+
+.html .point.filled{
+    background-color: #e34f26;
+}
+
+.css .point.filled {
+    background-color: #1572b6; 
+}
+
+.javascript .point.filled {
+    background-color: #f7df1e; 
+}
+
+.angular .point.filled {
+    background-color: #b52e31
+}
+
+.node .point.filled {
+    background-color: #8cc84b; 
+}
+
+.express .point.filled {
+    background-color: #000000; 
+}
+
+footer h3 {
+    font-size: 30px;
+    margin-left: 30px;
+    font-weight: 400;
+}
