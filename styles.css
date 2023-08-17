@@ -139,26 +139,26 @@ header a#logo p{
 }
 
 .logo-brace {
-    color: #61afef; /* Adjust this color to match the desired red/pink */
+    color: #61afef; 
 }
 
 .icon-link {
-    display: none; /* Hide icons by default */
+    display: none; 
 }
 
 .text-link {
-    display: inline; /* Show text links by default */
+    display: inline; 
 }
 
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
     .icon-link {
-        display: inline; /* Show icons on smaller screens */
+        display: inline; 
     }
 
     .text-link {
-        display: none; /* Hide text links on smaller screens */
+        display: none; 
     }
 }
 
@@ -272,6 +272,8 @@ header, .sub-header {
 .properties {
     padding-left: 50px; 
     padding-right: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .property {
@@ -286,6 +288,44 @@ header, .sub-header {
     color: #e06c75;
 }
 
+/* For screens smaller than 992px */
+@media only screen and (max-width: 992px) {
+    #welcome .name-title,
+    #welcome .student-title,
+    #welcome .about-me {
+        font-size: 35px;
+    }
+
+    #welcome .comment {
+        font-size: 22px;
+    }
+}
+
+/* For screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+    #welcome .name-title,
+    #welcome .student-title,
+    #welcome .about-me {
+        font-size: 30px;
+    }
+
+    #welcome .comment {
+        font-size: 20px;
+    }
+}
+
+/* For screens smaller than 576px */
+@media only screen and (max-width: 576px) {
+    #welcome .name-title,
+    #welcome .student-title,
+    #welcome .about-me {
+        font-size: 25px;
+    }
+
+    #welcome .comment {
+        font-size: 18px;
+    }
+}
 
 /*-----Projects------*/
 #projects {
@@ -319,7 +359,7 @@ header, .sub-header {
 
 .project-box:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(40, 44, 52, 0.2); 
+    box-shadow: 0 10px 20px ;
 }
 
 .project-box p {
@@ -357,7 +397,7 @@ header, .sub-header {
 .github-link img {
     width: 20px;
     height: auto;
-    filter: brightness(0) invert(1); /* Adjusted icon color */
+    filter: brightness(0) invert(1); 
 }
 
 .doc-link img {
@@ -368,7 +408,7 @@ header, .sub-header {
 
 @media (max-width: 1024px) {
     .project-container {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust as needed */
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
     }
 }
 
@@ -390,15 +430,13 @@ header, .sub-header {
     margin-bottom: 50px;
 }
 
-#skills h2 {
-    font-size: 36px;
-    color: #61afef;
-    margin-bottom: 20px;
-    font-weight: 400;
-    text-align: center;
+#skills .css-format {
+    width: 95%;
 }
 
 .skills-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -410,26 +448,80 @@ header, .sub-header {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    margin: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .skill {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    padding-bottom: 25px;
+    padding-top: 25px;
     width: 100%;
+    border: 1px solid #fff;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #3e4451;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    width: 100%;
+    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform, box-shadow;
+}
+
+.skill:hover {
+    border-color: #abb2bf;
+    transform: translateY(-5px);
+    transform: scale(1.2); 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill.html:hover {
+    border-color: #e34f26;
+    box-shadow: 0px 10px 20px rgba(227, 79, 38, 0.2);
+}
+
+.skill.css:hover {
+    border-color: #1572b6; 
+    box-shadow: 0px 10px 20px rgba(21, 114, 182, 0.2);
+}
+
+.skill.javascript:hover {
+    border-color: #f7df1e; 
+    box-shadow: 0px 10px 20px rgba(247, 223, 30, 0.2);
+}
+
+.skill.angular:hover {
+    border-color: #b52e31; 
+    box-shadow: 0px 10px 20px rgba(181, 46, 49, 0.2);
+}
+
+.skill.node:hover {
+    border-color: #8cc84b; 
+    box-shadow: 0px 10px 20px rgba(139, 200, 75, 0.2);
+}
+
+.skill.react:hover {
+    border-color: #61DAFB; 
+    box-shadow: 0px 10px 20px rgba(97, 218, 251, 0.2);
+}
+
+.skill-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
 }
 
 .skill-name {
     min-width: 120px;
     white-space: nowrap;
-    padding-right: 5px;
+    padding-right: 10px;
     font-size: 18px;
     color: #abb2bf;
     flex-shrink: 0;
-    
 }
 
 .progress {
@@ -445,6 +537,37 @@ header, .sub-header {
     background-color: #e0e0e0;
     margin-left: 10px;
 }
+
+.point.filled {
+    transform: scale(1);  
+    transition: transform 0.3s ease;
+}
+
+.skill:hover .point.filled {
+    transform: scale(1.2); 
+}
+
+
+.skill:hover .point.filled:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.skill:hover .point.filled:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.skill:hover .point.filled:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.skill:hover .point.filled:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.skill:hover .point.filled:nth-child(5) {
+    transition-delay: 0.5s;
+}
+
 
 .html .point.filled{
     background-color: #e34f26;
@@ -466,8 +589,8 @@ header, .sub-header {
     background-color: #8cc84b; 
 }
 
-.express .point.filled {
-    background-color: #000000; 
+.react .point.filled {
+    background-color: #61DAFB; 
 }
 
 /*-----Experience------*/
