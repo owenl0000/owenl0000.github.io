@@ -4,23 +4,25 @@
 }
 
 #content-wrap::-webkit-scrollbar-track {
-    background: #282c34; 
+    background: #3e4451; 
     border-left: 1px solid #5a5d63; 
+    border-top: 1px solid #5a5d63;
 }
 
 #content-wrap::-webkit-scrollbar-thumb {
-    background: #3e4451; 
-    border-left: 1px solid #5a5d63; 
+    background: rgba(80, 90, 100, 0);
+    opacity: 0; 
+    transition: opacity 0.5s;
 }
 
 #content-wrap::-webkit-scrollbar-thumb:hover {
-    background: #4e545b; 
+    background: rgba(95, 105, 115, 0.7);
 }
 
 /* For Firefox */
 #content-wrap {
     scrollbar-width: thin; 
-    scrollbar-color: #3e4451 #1e2127; 
+    scrollbar-color: rgba(62, 68, 81, 0.8) #1e2127;  
 }
 
 * {
@@ -41,15 +43,14 @@ body {
 #content-wrap {
     overflow-y: scroll; 
     flex-grow: 1;
-    padding-top: 100px; 
-    margin-top: 100px;
-    height: calc(100vh - 100px);
-
+    padding-top: 130px; 
+    margin-top: 80px;
+    height: calc(100vh - 210px);
 }
 
 /*-----Navbar------*/
 header {
-    background-color: #1e2127;
+    background-color: #282c34;
     border-bottom: 1px solid #3e4451; 
     position: fixed;
     width: 100%;
@@ -65,13 +66,12 @@ header {
 .tab {
     display: inline-flex;
     background-color: #3e4451;
-    border: 1px solid #282c34;
-    border-bottom: 2px solid #fff;
-    border-radius: 5px 5px 0 0;
+    border-right: .25px solid #000000;
+    border-bottom: .25px solid #fff;
     margin-right: 20px;
     overflow: hidden;
     z-index: 12;
-    margin-bottom: -2px;
+    
 }
 
 .tab-hover {
@@ -102,9 +102,10 @@ header li {
 
 header a {
     text-decoration: none;
-    color: #61afef;
+    color: #ffffff;
     padding-left: 10px;
     padding-right: 20px;
+    font-family: Calibri;
 }
 
 header a#logo {
@@ -115,6 +116,7 @@ header a#logo {
     padding: 10px 20px;
     display: block;
     border-right: 1px solid #282c34;
+    
 }
 
 .tab:last-child a#logo {
@@ -126,6 +128,7 @@ header a#logo p{
     line-height: 1;
     margin: 0;
     white-space: nowrap;
+    font-family: Calibri;
 }
 
 .logo-brace {
@@ -168,6 +171,11 @@ header a#logo p{
     padding-left: 30px !important;
 }
 
+.no-shadow {
+    box-shadow: none !important;
+}
+
+
 header, .sub-header {
     line-height: 1.2; 
     margin: 0;
@@ -185,87 +193,121 @@ header, .sub-header {
 .logo-text {
     color: #abb2bf;
     margin-right: 15px;
+    font-family: Calibri;
 }
 
-.section-icons i.fas.fa-link {
+.section-icons i.fa-diagram-project {
     color: #FFA500;
 }
 
+.section-icons {
+    padding-right: 2px;
+}
 .section-name {
+    font-family: Calibri;
 }
 
 /*-----Introduction------*/
 #welcome {
     position: relative;
     box-sizing: border-box;
-    padding: 100px;
+    padding-bottom: 100px;
     text-align: left;
     width: 100%;
-    margin: 100px auto;
+    margin-bottom: 100px;
     color: #abb2bf;
-    background-color: #282c34;
-    padding-left: 11%;
-    border-top: 1px solid #5a5d63; 
-    border-bottom: 1px solid #5a5d63; 
-}
-
-#welcome p {
-    margin: 5px;
+    background-color: #3e4451;
 }
 
 #welcome .name-title {
-    font-size: 20px;
+    font-size: 50px;
 }
 
 #welcome .student-title {
-    font-size: 16px;
+    font-size: 50px;
     color: #b9b9b9;
+    margin-bottom: 20px;
 }
 
 #welcome .about-me {
     margin-top: 50px;
-    font-size: 20px;
+    font-size: 50px;
+}
+
+#welcome .comment {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-style: italic;
+    font-size: 30px;
+    color: #5c6370;
+}
+
+.css-format {
+    font-family: 'Consolas', 'Monaco', 'Liberation Mono', 'Courier New', monospace;
+    padding: 20px;
+    color: #abb2bf; 
+    position: relative;
+    width: 90%; 
+}
+
+.selector {
+    font-size: 60px; 
+    color: #61afef; 
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.brace {
+    font-size: 60px;
+    color: #d19a66;
+    display: inline-block;
+}
+
+.properties {
+    padding-left: 50px; 
+    padding-right: 10px;
+}
+
+.property {
+    margin-bottom: 10px;
+}
+
+.value {
+    color: #d19a66; 
+}
+
+.value p{
     color: #e06c75;
 }
 
-#welcome h1 {
-    margin: 5px;
-    font-size: 45px;
-    color: #d19a66;
-    font-weight: 500;
-}
 
 /*-----Projects------*/
 #projects {
     margin-top: 100px;
-    text-align: center;
     margin-bottom: 100px;
-}
-
-#projects h2 {
-    font-size: 36px;
-    font-weight: 300;
-    margin: 20px 0;
-    color: #61afef;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .project-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 0 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 40px;
 }
 
 .project-box {
-    border: 1px solid #3e4451; 
+    border: 1px solid #ffffff; 
     padding: 20px;
     box-sizing: border-box;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #282c34;
+    background-color: #3e4451;
     color: #abb2bf;
     width: 90%;
     margin: 0 auto;
+    text-align: center;
 }
 
 .project-box:hover {

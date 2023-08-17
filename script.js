@@ -1,19 +1,5 @@
 let currentSectionId = null;
 
-document.querySelector("#content-wrap").addEventListener('scroll', function() {
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-        if (isInView(section)) {
-            const sectionId = section.getAttribute('id');
-            console.log(`In view: ${sectionId}`); // Debugging line
-            if (currentSectionId !== sectionId) {
-                updateSectionName(sectionId);
-                currentSectionId = sectionId;
-            }
-        }
-    });
-});
-
 function getMostVisibleSection(sections) {
     let maxVisibleHeight = 0;
     let mostVisibleSection = null;
@@ -55,8 +41,31 @@ function updateSectionName(sectionId) {
 
     const sectionNameElement = document.querySelector('.section-name');
     if (sectionNames[sectionId]) {
-        sectionNameElement.textContent = `\u00A0#${sectionNames[sectionId]}`;
+        sectionNameElement.textContent = `#${sectionNames[sectionId]}`;
     } else {
         sectionNameElement.textContent = `...`;
     }
 }
+
+
+const contentWrap = document.querySelector("#content-wrap");
+
+contentWrap.addEventListener('scroll', function() {
+    const subHeader = document.querySelector('.sub-header');
+
+    if (contentWrap.scrollTop === 0) {
+        subHeader.classList.add('no-shadow');
+    } else {
+        subHeader.classList.remove('no-shadow');
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const subHeader = document.querySelector('.sub-header');
+
+    if (contentWrap.scrollTop === 0) {
+        subHeader.classList.add('no-shadow');
+    }
+});
+
+

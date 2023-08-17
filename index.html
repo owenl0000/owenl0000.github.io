@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Space+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/66ee73a1f5.js" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
 
 
@@ -35,24 +36,34 @@
 
     <div class="sub-header">
             <span class="logo-brace">#</span> 
-            <span class="logo-text">owenl.css&nbsp;></span> 
+            <span class="logo-text">owenl.css&nbsp;&nbsp;></span> 
             
             <div class="section-icons">
-                <i class="fas fa-link"></i>
+                <i class="fa-solid fa-diagram-project"></i>
             </div>
-            <span class="section-name">&nbsp;#home</span>
+            <span class="section-name">#home</span>
     </div>
     
     <div id="content-wrap">
         <main id="main-content">
             <section id="welcome">
-                <p class="name-title">Owen Liang</p>
-                <p class="student-title">Student</p>
-                <h1>Hey there! I am a undergrad student pursuing a bachelor's degree in Computer Science at Brooklyn College. I'm passionate about web development and software engineering.</h1>
-                <p class="about-me">I also enjoy playing the piano and learning a new language on my free time.</p>
+                <div class="css-format">
+                    <span class="selector">#welcome</span><span class="brace">&nbsp;{</span>
+                    <div class="properties">
+                        <div class="property name-title">Name: <span class="value">Owen Liang</span>;</div>
+                        <div class="property student-title">Student: <span class="value">Computer Science</span>;</div>
+                        <div class="property about-me">Introduction: 
+                            <span class="value">
+                                Hey there! I am an undergrad student pursuing a bachelor's degree in Computer Science at Brooklyn College. I'm passionate about web development and software engineering.
+                            </span>
+                        </div>
+                        <div class="property comment">/* <span class="comment">I also enjoy playing the piano and learning a new language on my free time.</span>*/</div>
+                    </div>
+                    <span class="brace">}</span>
+                </div>
             </section>
-            <section id="projects">
-                <h2>My Projects</h2>
+            <section id="projects" class="css-format">
+                <span class="selector">#projects</span> <span class="brace">&nbsp;{</span>
                 <div class="project-container">
                     <article class="project-box">
                         <a href="https://owenl0000.itch.io/procrastination" class="project-link" target="_blank">
@@ -83,6 +94,7 @@
                         </a>
                     </article>
                 </div>
+                <span class="brace">}</span>
             </section>
             <section id="skills">
                 <h2>Skills</h2>
@@ -189,7 +201,6 @@
         </main>
         
         <footer>
-                <h3>}</h3>
                 <p>&copy; 2023 by Owen Liang. All rights reserved.</p>
         </footer>
 
