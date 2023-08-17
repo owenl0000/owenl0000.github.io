@@ -69,3 +69,50 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+contentWrap.classList.add('inactive');
+let timeout;
+let fadingOut = false;
+let fadingIn = false;
+let alpha = 0.7; 
+
+function fadeOut() {
+    if (alpha > 0) {
+        alpha -= 0.008; 
+        document.documentElement.style.setProperty('--scrollbar-alpha', alpha);
+        requestAnimationFrame(fadeOut);
+    } else {
+        fadingOut = false;
+    }
+}
+
+function fadeIn() {
+    if (alpha < 0.7) {
+        alpha += 0.008; 
+        document.documentElement.style.setProperty('--scrollbar-alpha', alpha);
+        requestAnimationFrame(fadeIn);
+    } else {
+        fadingIn = false;
+    }
+}
+
+function setActive() {
+    if (fadingOut) return;
+    if (fadingIn) return;  
+
+    clearTimeout(timeout);
+
+    if (alpha < 0.7) {
+        fadingIn = true;
+        fadeIn();
+    }
+
+    timeout = setTimeout(function() {
+        if (alpha > 0) {
+            fadingOut = true;
+            fadeOut();
+        }
+    }, 500);
+}
+
+document.addEventListener('mousemove', setActive);
+document.addEventListener('mouseover', setActive);

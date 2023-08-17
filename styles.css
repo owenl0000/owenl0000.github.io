@@ -9,11 +9,18 @@
     border-top: 1px solid #5a5d63;
 }
 
-#content-wrap::-webkit-scrollbar-thumb {
-    background: rgba(80, 90, 100, 0);
-    opacity: 0; 
-    transition: opacity 0.5s;
+:root {
+    --scrollbar-alpha: 0.7;
 }
+
+#content-wrap::-webkit-scrollbar-thumb {
+    background: rgba(80, 90, 100, 0.7);
+}
+
+#content-wrap.inactive::-webkit-scrollbar-thumb {
+    background: rgba(80, 90, 100, var(--scrollbar-alpha));
+}
+
 
 #content-wrap::-webkit-scrollbar-thumb:hover {
     background: rgba(95, 105, 115, 0.7);
@@ -375,14 +382,12 @@ header, .sub-header {
 
 /*----Skills----*/
 #skills {
-    background-color: #282c34;
+    background-color: #3e4451;
     padding: 20px;
     width: 100%;
     box-sizing: border-box;
     color: #abb2bf;
     margin-bottom: 50px;
-    border-top: 1px solid #5a5d63; 
-    border-bottom: 1px solid #5a5d63; 
 }
 
 #skills h2 {
@@ -467,7 +472,7 @@ header, .sub-header {
 
 /*-----Experience------*/
 #experience {
-    background-color: #1e2127;
+    background-color: #3e4451;
     padding-bottom: 50px;
     margin-bottom: 50px;
     align-items: center;
