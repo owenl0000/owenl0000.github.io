@@ -19,7 +19,7 @@
     <header>
         <div class="tab">   
             <a href="index.html" id="logo">
-                <p><span class="logo-brace">#</span>&nbsp;owenl.css</p>
+                <h1 id="tab-text"><span class="logo-brace">#</span>&nbsp;owenl.css</h1>
             </a>
         </div>  
         <nav>
@@ -48,7 +48,7 @@
         <main id="main-content">
             <section id="welcome">
                 <div class="css-format">
-                    <span class="selector">#welcome</span><span class="brace">&nbsp;{</span>
+                    <h2 class="selector">#welcome</h2><span class="brace">&nbsp;{</span>
                     <div class="properties">
                         <div class="property name-title">Name: <span class="value">Owen Liang</span>;</div>
                         <div class="property student-title">Student: <span class="value">Computer Science</span>;</div>
@@ -63,7 +63,7 @@
                 </div>
             </section>
             <section id="projects" class="css-format">
-                <span class="selector">#projects</span> <span class="brace">&nbsp;{</span>
+                <h2 class="selector">#projects</h2> <span class="brace">&nbsp;{</span>
                 <div class="project-container">
                     <article class="project-box">
                         <a href="https://owenl0000.itch.io/procrastination" class="project-link" target="_blank">
@@ -98,14 +98,14 @@
             </section>
             <section id="skills" class="css-format">
                 
-                    <span class="selector">#skills</span>
+                    <h2 class="selector">#skills</h2>
                     <span class="brace">&nbsp;{</span>
                 <div class="skills-container">
 
                     <div class="skill-column">
                         <div class="skill html">
                             <img src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/file_type_html.svg" alt="HTML Icon" class="skill-icon">
-                            <span class="skill-name" style="color: #e34f26;">HTML</span>
+                            <p class="skill-name" style="color: #e34f26;">HTML</p>
                             <div class="progress html">
                                 <div class="point filled"></div>
                                 <div class="point filled"></div>
@@ -116,7 +116,7 @@
                         </div>
                         <div class="skill css">
                             <img src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/file_type_css.svg" alt="CSS Icon" class="skill-icon">
-                            <span class="skill-name" style="color: #1572b6;">CSS</span>
+                            <p class="skill-name" style="color: #1572b6;">CSS</p>
                             <div class="progress css">
                                 <div class="point filled"></div>
                                 <div class="point filled"></div>
@@ -127,7 +127,7 @@
                         </div>
                         <div class="skill javascript">
                             <img src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/file_type_js.svg" alt="JS Icon" class="skill-icon">
-                            <span class="skill-name" style="color: #f7df1e;">JavaScript</span>
+                            <p class="skill-name" style="color: #f7df1e;">JavaScript</p>
                             <div class="progress javascript">
                                 <div class="point filled"></div>
                                 <div class="point filled"></div>
@@ -141,7 +141,7 @@
                     <div class="skill-column">
                         <div class="skill angular">
                             <img src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/file_type_angular.svg" alt="Angular Icon" class="skill-icon">
-                            <span class="skill-name" style="color:#b52e31 ;">Angular</span>
+                            <p class="skill-name" style="color:#b52e31 ;">Angular</p>
                             <div class="progress angular">
                                 <div class="point filled"></div>
                                 <div class="point filled"></div>
@@ -152,7 +152,7 @@
                         </div>
                         <div class="skill node">
                             <img src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/file_type_node.svg" alt="Node Icon" class="skill-icon">
-                            <span class="skill-name" style="color: #8cc84b;">Node</span>
+                            <p class="skill-name" style="color: #8cc84b;">Node</p>
                             <div class="progress node">
                                 <div class="point filled"></div>
                                 <div class="point filled"></div>
@@ -163,7 +163,7 @@
                         </div>
                         <div class="skill react">
                             <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React Icon" class="skill-icon">
-                            <span class="skill-name" style="color: #61DAFB;">React</span>
+                            <p class="skill-name" style="color: #61DAFB;">React</p>
                             <div class="progress react">
                                 <div class="point filled"></div>
                                 <div class="point filled"></div>
@@ -175,39 +175,49 @@
                     </div>
                 </div>
                 <span class="brace">}</span>
-
             </section>
-            <section id="experience">
-                <h2>Experience</h2>
+
+            <section id="experience" class="css-format">
+                <h2 class="selector">#experience</h2> <span class="brace">&nbsp;{</span>
                     <div id="experience-box">
                         <h3>Web Development Fellow @ CUNY Tech Prep</h3>
                         <p>June 2023 - Present</p>
-                        <a href="https://cunytechprep.org/" class="experience-link" target="_blank">
+                        <a href="https://cunytechprep.org/about/program/" class="experience-link" target="_blank">
                             <img src="Images/CTP logo.png" alt="CTP logo" class="experience-pic">
                         </a>
                     </div>
-            </section>
-            <div id="contact-container">
-                <section id="contact">
-                    <h2>Want to get in touch?</h2>
-                    <h2>Drop me an email!</h2>
-                    <form action="contact-form-handler.php" method="post">
-                        <div class="input-row"> 
-                            <div class="input-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" required placeholder="Enter your name ...">
+                    <span class="brace">}</span>
+            </section>     
+    
+            <section id="contact" class="css-format">
+                <h2 class="selector">#contact</h2> <span class="brace">&nbsp;{</span>
+                    <div id="social-buttons">
+                        <a href="mailto:owenliang3139@gmail.com" class="btn gmail">        
+                            <i class="fas fa-envelope"></i>
+                            <div class="btn-text">
+                                <span>Email</span>
+                                <small>owenliang3139@gmail.com</small>
                             </div>
-                            <div class="input-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required placeholder="Enter your email ...">
+                        </a>
+                        <a href="https://github.com/owenl0000" target="_blank" class="btn github">
+                            <i class="fab fa-github"></i>
+                            <div class="btn-text">
+                                <span>GitHub</span>
+                                <small>github.com/owenl0000</small>
                             </div>
-                        </div>
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required placeholder="Enter your message ..."></textarea>
-                        <button type="submit">Send Message</button>
-                    </form>
-                </section>
-            </div>
+                        </a>
+                        <a href="https://linkedin.com/in/owenl0000" target="_blank" class="btn linkedin">
+                            <i class="fab fa-linkedin"></i>
+                            <div class="btn-text">
+                                <span>LinkedIn</span>
+                                <small>linkedin.com/in/owenl0000</small>
+                            </div>
+                        </a>
+                    </div>
+                    
+                <span class="brace">}</span>
+            </section>          
+
         </main>
         
         <footer>

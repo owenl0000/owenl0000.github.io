@@ -50,9 +50,9 @@ body {
 #content-wrap {
     overflow-y: scroll; 
     flex-grow: 1;
-    padding-top: 130px; 
+    padding-top: 80px; 
     margin-top: 80px;
-    height: calc(100vh - 210px);
+    height: calc(100vh - 160px);
 }
 
 /*-----Navbar------*/
@@ -130,12 +130,13 @@ header a#logo {
     border-right: none;
 }
 
-header a#logo p{
+header a#logo #tab-text{
     font-size: 30px; 
     line-height: 1;
     margin: 0;
     white-space: nowrap;
     font-family: Calibri;
+    font-weight: 400;
 }
 
 .logo-brace {
@@ -218,10 +219,10 @@ header, .sub-header {
 #welcome {
     position: relative;
     box-sizing: border-box;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     text-align: left;
     width: 100%;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     color: #abb2bf;
     background-color: #3e4451;
 }
@@ -262,6 +263,7 @@ header, .sub-header {
     color: #61afef; 
     display: inline-block;
     margin-bottom: 10px;
+    font-weight: 400;
 }
 .brace {
     font-size: 60px;
@@ -475,7 +477,8 @@ header, .sub-header {
 .skill:hover {
     border-color: #abb2bf;
     transform: translateY(-5px);
-    transform: scale(1.2); 
+    transform: scale(1.1); 
+    transition: transform .5s ease;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -598,17 +601,10 @@ header, .sub-header {
     background-color: #3e4451;
     padding-bottom: 50px;
     margin-bottom: 50px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
-
-#experience h2 {
-    font-size: 36px;
-    color: #61afef;
-    margin-bottom: 20px;
-    font-weight: 400;
-    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 #experience h3 {
@@ -617,108 +613,150 @@ header, .sub-header {
     color: #d19a66;
     font-weight: 500;
     text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 #experience p {
     margin: 5px;
-    font-size: 20px;
+    font-size: 24px;
     color: #e06c75;
     text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 #experience-box {
-    background-color: #282c34;
     width: 80%;
     max-width: 600px;
     min-width: 200px;
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
-    margin: 0 auto;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, .005);
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.experience-link {
+    display: inline-block;
+    width: 120px;
+    height: 120px; 
+    border-radius: 50%;  
+    margin: 20px auto; 
+    line-height: 0; 
+    position: relative; 
+    transition: transform 0.3s ease; 
 }
 
 .experience-pic {
-    width: 100px; 
     height: auto; 
     display: block; 
-    margin: 10px auto; 
-    border-radius: 10%;
+    width: 120px;
+    height: 120px; 
+    border-radius: 50%;  
+    margin: 20px auto; 
+    line-height: 0; 
+    position: relative; 
+    transition: transform 0.3s ease; 
+}
+
+.experience-pic:hover {
+    transform: scale(1.1);
 }
 
 
 
 /*-----Contact Me------*/
-#contact-container {
-    background-color: #282c34;
-    width: 95%;
-    margin: 20px auto;
-    margin-bottom: 100px;
-}
-
 #contact {
-    margin: 20px;
-    width: 75%;
+    width: 100%;
     padding: 20px;
     color: #abb2bf;
+    box-sizing: border-box; 
 }
 
-#contact h2 {
+#contact h3 {
     font-weight: 300;
     font-size: 36px;
     margin: 5px 5px 0 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
-#contact .input-row {
+#social-buttons {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    justify-content: center;
+    gap: 10px;
     margin-top: 20px;
-}
-
-#contact .input-group {
-    width: 48%;
-}
-
-#contact input,
-#contact textarea {
     width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    margin-top: 5px;
-    background-color: #3e4451; 
-    color: #abb2bf; 
 }
 
-#contact textarea {
-    height: 300px; 
-    resize: none;
-}
-
-#contact button {
+.btn {
+    display: flex;
+    align-items: center;
     padding: 10px 20px;
     border: none;
-    color: #e06c75;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    border-radius: 5px;
     background-color: #3e4451;
-    margin-top: 5px;
-    display: block;
-    text-align: center;
-    margin-left: auto;
+    color: #e06c75;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    margin: 50px;
 }
 
-#contact button:hover {
-    background-color: #666;
+.btn:hover {
+    transform: translateY(-3px);
 }
 
-#contact label {
-    margin-bottom: 10px;
+.btn i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.btn-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-text span {
+    font-weight: bold;
+}
+
+.btn-text small {
     font-size: 12px;
-    text-transform: uppercase;
-    font-weight: 500;
-    color:#d19a66;
+    opacity: 0.8;
 }
+
+/* Gmail */
+.btn.gmail {
+    color: #EA4335; 
+}
+
+.btn.gmail:hover {
+    background-color: #EA4335;
+    color: #fff;
+}
+
+/* GitHub */
+.btn.github {
+    color: #6e5494; 
+}
+
+.btn.github:hover {
+    background-color: #6e5494;
+    color: #fff;
+}
+
+/* LinkedIn */
+.btn.linkedin {
+    color: #0A66C2; 
+}
+
+.btn.linkedin:hover {
+    background-color: #0A66C2;
+    color: #fff;
+}
+
 
 footer {
     background-color: #282c34; 
