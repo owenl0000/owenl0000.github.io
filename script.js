@@ -30,7 +30,7 @@ document.querySelector("#content-wrap").addEventListener('scroll', function() {
 
 
 function updateSectionName(sectionId) {
-    console.log(`Updating to: ${sectionId}`); // Debugging line
+    console.log(`Updating to: ${sectionId}`); 
     const sectionNames = {
         "welcome": "welcome",
         "projects": "projects",
@@ -46,6 +46,43 @@ function updateSectionName(sectionId) {
         sectionNameElement.textContent = `...`;
     }
 }
+
+let linkClicked = false;
+
+document.addEventListener('DOMContentLoaded', function() {
+    var dropdown = document.querySelector('.dropdown');
+    var dropdownContent = document.querySelector('.dropdown-content');
+    var links = dropdownContent.querySelectorAll('a');
+    var currentSection = document.querySelector('.current-section');
+
+    
+    dropdown.addEventListener('click', function() {
+        if (linkClicked) {
+            linkClicked = false;
+            return;
+        }
+
+        if (dropdownContent.style.display === 'block') {
+            dropdownContent.style.display = 'none';
+            currentSection.classList.remove('underline');
+        } else {
+            dropdownContent.style.display = 'block';
+            currentSection.classList.add('underline');
+        }
+    });
+
+
+    links.forEach(function(link) {
+        link.addEventListener('click', function() {
+            linkClicked = true;
+            var sectionName = link.textContent.trim();
+            currentSection.textContent = sectionName;
+            dropdownContent.style.display = 'none';
+            currentSection.classList.remove('underline');
+        });
+    });
+});
+
 
 
 const contentWrap = document.querySelector("#content-wrap");
@@ -116,3 +153,19 @@ function setActive() {
 
 document.addEventListener('mousemove', setActive);
 document.addEventListener('mouseover', setActive);
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const runBtn = document.querySelector('.run-btn');
+    const terminalPopup = document.querySelector('.terminal-popup');
+    const terminalCloseBtn = document.querySelector('.terminal-close-btn');
+
+    runBtn.addEventListener('click', function() {
+        terminalPopup.style.display = 'block';
+    });
+
+    terminalCloseBtn.addEventListener('click', function() {
+        terminalPopup.style.display = 'none';
+    });
+});
+

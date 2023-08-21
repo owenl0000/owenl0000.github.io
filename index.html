@@ -22,26 +22,44 @@
                 <h1 id="tab-text"><span class="logo-brace">#</span>&nbsp;owenl.css</h1>
             </a>
         </div>  
-        <nav>
-            <ul>
-                <li><a href="#projects" class="text-link">Projects</a><a href="#projects" class="icon-link"><i class="fas fa-folder"></i></a></li>
-                <li><a href="#contact" class="text-link">Contact</a><a href="#contact" class="icon-link"><i class="fas fa-envelope"></i></a></li>
-                <li><a href="https://github.com/owenl0000" class="text-link" target="_blank">Github</a><a href="githublink" target="_blank" class="icon-link"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/owenl0000" class="text-link" target="_blank">LinkedIn</a><a href="linkedinlink" target="_blank" class="icon-link"><i class="fab fa-linkedin"></i></a></li>
-            </ul>
-        </nav>
+
+        <div class="vscode-controls">
+            <button class="icon-btn run-btn"><i class="fas fa-play"></i></button>
+            <button class="icon-btn open-changes-btn"><i class="fas fa-code-branch"></i></button>
+            <button class="icon-btn split-editor-btn"><i class="fas fa-columns"></i></button>
+            <button class="icon-btn ellipsis-btn"><i class="fas fa-ellipsis-h"></i></button>
+        </div>
         
+        <div class="terminal-popup">
+            <div class="terminal-header">
+                <h4>TERMINAL</h4>
+                <button class="terminal-close-btn">X</button>
+            </div>
+            <div class="terminal-content">
+                <p>C:\Website\Portfolio\owenl0000.github.io> Thanks for visiting!</p>
+            </div>
+        </div>
               
     </header>
 
     <div class="sub-header">
-            <span class="logo-brace">#</span> 
-            <span class="logo-text">owenl.css&nbsp;&nbsp;></span> 
-            
-            <div class="section-icons">
-                <i class="fa-solid fa-diagram-project"></i>
+        <span class="logo-brace">#</span> 
+        <span class="logo-text">owenl.css&nbsp;&nbsp;></span> 
+    
+        <div class="dropdown">
+            <span class="dropbtn">
+                <i class="fa-solid fa-diagram-project"></i> 
+                <span class="current-section section-name">#welcome</span>
+            </span>
+            <div class="dropdown-content">
+                <a href="#welcome"><i class="fa-solid fa-diagram-project"></i> #welcome</a>
+                <a href="#projects"><i class="fa-solid fa-diagram-project"></i> #projects</a>
+                <a href="#skills"><i class="fa-solid fa-diagram-project"></i> #skills</a>
+                <a href="#experience"><i class="fa-solid fa-diagram-project"></i> #experience</a>
+                <a href="#contact"><i class="fa-solid fa-diagram-project"></i> #contact</a>
             </div>
-            <span class="section-name">#home</span>
+        </div>
+
     </div>
     
     <div id="content-wrap">
@@ -221,7 +239,7 @@
         </main>
         
         <footer>
-                <p>&copy; 2023 by Owen Liang. All rights reserved.</p>
+                <p>&copy; 2023 by Owen Liang. All rights reserved. Inspired by VSCode One Dark Pro</p>
         </footer>
 
     </div>

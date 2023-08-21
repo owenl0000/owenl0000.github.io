@@ -85,27 +85,6 @@ header {
     background-color: #2c313c;
 }
 
-header nav {
-    display: flex;
-    align-items: center;
-    padding-right: 20px;
-}
-header ul {
-    margin: 0;
-    padding: 0 ;
-    display: flex;
-    align-items: center;
-    list-style: none;
-  }
-
-header li {
-    color: #000;
-    font-size: 16px;
-    font-weight: 300;
-    text-transform: uppercase;
-    display: inline-flex;
-    margin: 10px;
-}
 
 header a {
     text-decoration: none;
@@ -150,6 +129,90 @@ header a#logo #tab-text{
 .text-link {
     display: inline; 
 }
+
+.vscode-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 10px;
+
+}
+
+.icon-btn {
+    background-color: transparent;
+    border: none;
+    color: #ffffff; 
+    font-size: 16px; 
+    padding: 3px 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.icon-btn:hover {
+    background-color: #2c313c;
+}
+
+.icon-btn:active {
+    background-color: #1f232a;
+}
+
+.terminal-popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #6d6d6d;
+    max-height: 30%; 
+    overflow-y: auto;
+    display: none; 
+    background-color: #3e4451; 
+    font-family: Calibri;
+    color: #abb2bf; 
+}
+
+.terminal-header {
+    background-color: #3e4451;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.terminal-header h4 {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #6d6d6d; 
+    color: #dbdbdb;
+    font-weight: 400;
+}
+
+.terminal-close-btn {
+    background-color: #3e4451;
+    color: #dbdbdb;
+    border: none;
+    padding: 2px 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+.terminal-close-btn:hover {
+    background-color: #4a4f58;
+    border-color: #b6bac0;
+}
+
+.terminal-content {
+    padding-left: 10px; 
+    font-family: Calibri;
+    background-color: #3e4451; 
+    border-radius: 5px; 
+    margin-bottom: 80px;
+}
+
+
 
 
 /* Media query for smaller screens */
@@ -204,7 +267,7 @@ header, .sub-header {
     font-family: Calibri;
 }
 
-.section-icons i.fa-diagram-project {
+.dropdown i.fa-diagram-project {
     color: #FFA500;
 }
 
@@ -213,6 +276,63 @@ header, .sub-header {
 }
 .section-name {
     font-family: Calibri;
+}
+
+.dropbtn:hover .section-name,
+.section-name.underline {
+    color: #e6e6e6;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: #abb2bf;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #282c34;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+    z-index: 1;
+    border-radius: 0 0 5px 5px;
+    margin-top: 10px;
+}
+
+.dropdown-content a {
+    color: #abb2bf;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-content a:hover {
+    background-color: #3e4451;
+}
+
+
+.fa-solid.fa-diagram-project {
+    margin-right: 5px;
+}
+
+.underline {
+    text-decoration: underline;
 }
 
 /*-----Introduction------*/
