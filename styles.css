@@ -182,7 +182,7 @@ header a#logo #tab-text{
 .terminal-header h4 {
     margin: 0;
     padding: 0;
-    border-bottom: 1px solid #6d6d6d; 
+    border-bottom: 1px solid #dbdbdb; 
     color: #dbdbdb;
     font-weight: 400;
 }
@@ -716,6 +716,34 @@ header, .sub-header {
     background-color: #61DAFB; 
 }
 
+.skill.java:hover {
+    border-color: #007396;
+    box-shadow: 0px 10px 20px rgba(0, 115, 150, 0.2);
+}
+
+.java .point.filled {
+    background-color: #007396;
+}
+
+/* C++ Skill */
+.skill.cpp:hover {
+    border-color: #F34B7D;
+    box-shadow: 0px 10px 20px rgba(243, 75, 125, 0.2);
+}
+
+.cpp .point.filled {
+    background-color: #F34B7D;
+}
+
+/* NextJS Skill */
+.skill.nextjs:hover {
+    border-color: #000000;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.nextjs .point.filled {
+    background-color: #000000;
+}
 /*-----Experience------*/
 #experience {
     background-color: #3e4451;
