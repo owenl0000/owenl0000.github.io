@@ -708,6 +708,15 @@ header, .sub-header {
     background-color: #b52e31
 }
 
+.skill.python:hover {
+    border-color: #3776AB; 
+    box-shadow: 0px 10px 20px rgba(55, 118, 171, 0.2);
+}
+
+.python .point.filled {
+    background-color: #3776AB;
+}
+
 .node .point.filled {
     background-color: #8cc84b; 
 }
